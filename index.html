@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>PSO</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="icon" type="image/x-icon" href="../seedling.svg" />
+    </head>
+    <body class="theme-default">
+        <canvas id="particles" width="150" height="150"></canvas>
+
+        <div id="menu">
+            <p>Particle Swarm Optimization</p>
+
+            <label for="numParticles">#Particles
+                <input type="number" id="numParticles" value="5" min="1" max="100" step="1" />
+            </label>
+            <label for="numPeaks">#Peaks
+                <input type="number" id="numPeaks" value="3" min="1" max="10" step="1" />
+            </label>
+            <button id="reset">Reset</button>
+            <a href="./moths.html">moths 🪰</a>
+            <p>
+                Global Best:<br />
+                <span id="global-best">N/A</span>
+            </p>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const script = document.createElement("script");
+                script.src = "./particles.js";
+                document.body.appendChild(script);
+            });
+        </script>
+    </body>
+</html>
